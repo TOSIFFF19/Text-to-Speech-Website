@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f7ff">
+  <meta name="description" content="A free, private text-to-speech studio powered by the voices built into your browser.">
+  <title>SpeakEasy — Text to speech, made delightful</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#studio">Skip to the studio</a>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="SpeakEasy home">
+      <span class="brand-mark" aria-hidden="true">S</span>
+      <span>Speak<span class="brand-accent">Easy</span></span>
+    </a>
+    <nav class="header-nav" aria-label="Main navigation">
+      <a href="#studio">Studio</a>
+      <a href="#india">India</a>
+      <a href="#voices">Voices</a>
+      <a href="#how-it-works">How it works</a>
+    </nav>
+    <button class="theme-toggle icon-button" id="theme-toggle" type="button" aria-label="Switch to dark mode" title="Switch theme">
+      <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"></path></svg>
+      <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.2 15.4A8.8 8.8 0 0 1 8.6 3.8 8.9 8.9 0 1 0 20.2 15.4Z"></path></svg>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero content-width" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="eyebrow-dot"></span> YOUR WORDS, OUT LOUD</span>
+        <h1 id="hero-title">Give your words<br>a <span class="gradient-text">voice.</span></h1>
+        <p>Turn anything you write into warm, natural-sounding speech. Free, private, and ready when you are.</p>
+        <a class="hero-link" href="#studio">Start listening <span aria-hidden="true">↓</span></a>
+        <div class="hero-note"><span class="privacy-icon" aria-hidden="true">✦</span> Your text stays right here in your browser.</div>
+      </div>
+      <div class="hero-art" aria-label="An animated friendly microphone surrounded by sound waves" role="img">
+        <div class="art-blob blob-one"></div>
+        <div class="art-blob blob-two"></div>
+        <span class="float-spark spark-one" aria-hidden="true">✦</span>
+        <span class="float-spark spark-two" aria-hidden="true">✧</span>
+        <svg class="hero-illustration" viewBox="0 0 420 360" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <defs>
+            <linearGradient id="micGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#7667f6"/><stop offset="1" stop-color="#a249db"/></linearGradient>
+            <linearGradient id="standGradient" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f47a9b"/><stop offset="1" stop-color="#f6a75b"/></linearGradient>
+            <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="12"/></filter>
+          </defs>
+          <ellipse cx="211" cy="308" rx="105" ry="17" fill="#8d79ed" opacity=".16" filter="url(#softShadow)"/>
+          <path class="sound-wave wave-left" d="M115 116c-20 23-20 75 0 98m-25-119c-31 34-31 105 0 140" fill="none" stroke="#a79cfb" stroke-width="8" stroke-linecap="round"/>
+          <path class="sound-wave wave-right" d="M305 116c20 23 20 75 0 98m25-119c31 34 31 105 0 140" fill="none" stroke="#a79cfb" stroke-width="8" stroke-linecap="round"/>
+          <rect x="157" y="54" width="106" height="186" rx="53" fill="url(#micGradient)"/>
+          <path d="M177 111v43c0 20 15 36 33 36s33-16 33-36v-43" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round"/>
+          <path d="M139 157v17c0 43 32 77 71 77s71-34 71-77v-17" fill="none" stroke="#5549b8" stroke-width="10" stroke-linecap="round"/>
+          <path d="M210 251v36m-31 0h62" stroke="url(#standGradient)" stroke-width="10" stroke-linecap="round"/>
+          <circle cx="210" cy="98" r="5" fill="#fff" opacity=".75"/>
+          <circle cx="228" cy="98" r="5" fill="#fff" opacity=".75"/>
+          <circle cx="246" cy="98" r="5" fill="#fff" opacity=".75"/>
+          <path d="M182 218c8 8 18 12 28 12s20-4 28-12" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+          <circle cx="93" cy="70" r="7" fill="#f6a75b"/><circle cx="333" cy="83" r="6" fill="#f47a9b"/>
+          <circle cx="115" cy="276" r="5" fill="#8878f2"/><circle cx="311" cy="276" r="8" fill="#f6a75b"/>
+        </svg>
+        <div class="art-caption"><span class="caption-wave" aria-hidden="true">〰</span> A little magic, built in</div>
+      </div>
+    </section>
+
+    <section class="studio-section section-pad" id="studio" aria-labelledby="studio-title">
+      <div class="content-width">
+        <div class="section-heading">
+          <span class="eyebrow">THE STUDIO</span>
+          <h2 id="studio-title">Make it <span class="gradient-text">speak.</span></h2>
+          <p>Drop in your text, find a voice you love, and press play.</p>
+        </div>
+        <div class="studio-card">
+          <div class="studio-topline">
+            <div class="studio-label"><span class="status-dot" aria-hidden="true"></span><span id="status-label" aria-live="polite">Ready to listen</span></div>
+            <div class="studio-tools">
+              <button class="text-button muted-button" id="clear-button" type="button">Clear</button>
+            </div>
+          </div>
+          <div class="quick-start" aria-label="Quick-start reading presets">
+            <div class="quick-start-heading">
+              <span class="eyebrow">QUICK START</span>
+              <span>Pick a vibe or grab a sample</span>
+            </div>
+            <div class="preset-list">
+              <button class="preset-chip preset-greeting" type="button" data-preset="greeting" aria-pressed="false"><span aria-hidden="true">👋</span> Greeting</button>
+              <button class="preset-chip preset-story" type="button" data-preset="story" aria-pressed="false"><span aria-hidden="true">📖</span> Story</button>
+              <button class="preset-chip preset-news" type="button" data-preset="news" aria-pressed="false"><span aria-hidden="true">📰</span> News</button>
+              <button class="preset-chip preset-joke" type="button" data-preset="joke" aria-pressed="false"><span aria-hidden="true">😂</span> Joke</button>
+              <button class="preset-chip preset-sample" type="button" data-preset="sample" aria-pressed="false"><span aria-hidden="true">✦</span> Sample</button>
+            </div>
+          </div>
+          <div class="text-editor-wrap">
+            <div class="text-highlight-layer" id="highlight-layer" aria-hidden="true"></div>
+            <textarea id="text-input" aria-label="Text to read aloud" placeholder="Once upon a time, a curious idea found its voice..." spellcheck="true"></textarea>
+          </div>
+          <div class="editor-footer">
+            <span id="text-count">0 characters · 0 words</span>
+            <span class="listen-estimate" id="listen-estimate" aria-live="polite">About 0 sec to listen</span>
+            <span class="keyboard-hint"><kbd>Ctrl</kbd><span>+</span><kbd>Enter</kbd> to play <span class="hint-divider">·</span> <kbd>Esc</kbd> to stop <button class="shortcut-tip" type="button" aria-label="Keyboard shortcuts" title="Ctrl+Enter: Play · Space: Pause or resume (when not typing) · Esc: Stop">?</button></span>
+          </div>
+          <div class="player-controls">
+            <div class="transport-controls">
+              <button class="play-button" id="play-button" type="button" aria-label="Play text" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7z"></path></svg><span>Play</span>
+              </button>
+              <button class="secondary-button" id="pause-button" type="button" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14m8-14v14"></path></svg>Pause
+              </button>
+              <button class="secondary-button" id="resume-button" type="button" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 12 7-12 7z"></path></svg>Resume
+              </button>
+              <button class="secondary-button stop-button" id="stop-button" type="button" disabled>
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"></rect></svg>Stop
+              </button>
+            </div>
+            <div class="equalizer" id="equalizer" aria-label="Audio activity" role="img">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div class="progress-track" role="progressbar" aria-label="Speech progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="progress-track"><span id="progress-fill"></span></div>
+          <div class="settings-grid">
+            <div class="setting-control">
+              <div class="setting-heading"><label for="rate-slider">Speed</label><output id="rate-value" for="rate-slider">1.0×</output></div>
+              <input id="rate-slider" type="range" min="0.5" max="2" step="0.1" value="1">
+              <div class="range-ends"><span>Slow</span><span>Fast</span></div>
+            </div>
+            <div class="setting-control">
+              <div class="setting-heading"><label for="pitch-slider">Pitch</label><output id="pitch-value" for="pitch-slider">1.0</output></div>
+              <input id="pitch-slider" type="range" min="0" max="2" step="0.1" value="1">
+              <div class="range-ends"><span>Low</span><span>High</span></div>
+            </div>
+            <div class="setting-control">
+              <div class="setting-heading"><label for="volume-slider">Volume</label><output id="volume-value" for="volume-slider">100%</output></div>
+              <input id="volume-slider" type="range" min="0" max="1" step="0.05" value="1">
+              <div class="range-ends"><span>Quiet</span><span>Loud</span></div>
+            </div>
+            <button class="reset-button" id="reset-button" type="button" title="Reset speed, pitch, and volume">↺ <span>Reset</span></button>
+          </div>
+          <div class="browser-notice" id="browser-notice" role="status" hidden></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="indian-section section-pad" id="india" aria-labelledby="india-title">
+      <div class="content-width">
+        <div class="india-card">
+          <div class="india-copy">
+            <span class="india-eyebrow"><span aria-hidden="true">🇮🇳</span> NAMASTE, INDIA</span>
+            <h2 id="india-title">A little more <span>desi.</span></h2>
+            <p>Choose an Indian English or Hindi voice. Try a Hindi or Hinglish joke, or read your own text with the matching voice.</p>
+            <div class="india-flag" aria-hidden="true"><span></span><span></span><span></span><i>☸</i></div>
+          </div>
+          <div class="india-controls">
+            <label for="india-voice-select">Your Indian voice</label>
+            <select id="india-voice-select" aria-describedby="india-voice-status">
+              <option value="">Finding Indian voices…</option>
+            </select>
+            <p class="india-status" id="india-voice-status" role="status" aria-live="polite">Looking for installed voices with an India language tag…</p>
+            <button class="india-refresh-button" id="india-refresh-voices" type="button"><span aria-hidden="true">↻</span> Refresh installed voices</button>
+            <div class="india-actions">
+              <button class="india-joke-button" id="india-hindi-joke-button" type="button" disabled><span aria-hidden="true">😄</span> Hindi joke</button>
+              <button class="india-hinglish-button" id="india-hinglish-joke-button" type="button" disabled><span aria-hidden="true">😄</span> Hinglish joke</button>
+              <button class="india-read-button" id="india-read-button" type="button" disabled><span aria-hidden="true">▶</span> Read my text</button>
+            </div>
+            <details class="hindi-help">
+              <summary>How do I add a Hindi voice?</summary>
+              <div class="hindi-help-content">
+                <p>This app uses voices provided by your browser and device; it cannot install a voice itself.</p>
+                <ul>
+                  <li><strong>Windows:</strong> Open Settings → Time &amp; language → Speech, then look for Manage voices or Add voices. Add a Hindi voice if your Windows edition offers one.</li>
+                  <li><strong>Android:</strong> Open Settings → Accessibility or General management → Text-to-speech output. In your preferred engine, install a Hindi voice if available.</li>
+                  <li><strong>iPhone/iPad:</strong> Open Settings → Accessibility → Spoken Content → Voices, then download a Hindi voice if listed.</li>
+                  <li><strong>Mac:</strong> Open System Settings → Accessibility → Spoken Content → System Voice → Manage Voices, then add Hindi if available.</li>
+                </ul>
+                <p>After installing, restart the browser or press <strong>Refresh installed voices</strong>. Hindi appears here only when the browser reports a voice tagged <code>hi-IN</code>.</p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="voices-section section-pad" id="voices" aria-labelledby="voices-title">
+      <div class="content-width">
+        <div class="section-heading voices-heading">
+          <span class="eyebrow">FIND YOUR SOUND</span>
+          <h2 id="voices-title">Meet the <span class="gradient-text">voices.</span></h2>
+          <p>Every voice has its own personality. Try a few and find your favorite.</p>
+        </div>
+        <div class="voice-filters">
+          <label class="search-field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"></circle><path d="m16 16 4.4 4.4"></path></svg>
+            <span class="visually-hidden">Search voices</span>
+            <input type="search" id="voice-search" placeholder="Search voices or languages..." autocomplete="off">
+          </label>
+          <label class="filter-select"><span class="visually-hidden">Filter voices by language</span>
+            <select id="language-filter"><option value="all">All languages</option></select>
+          </label>
+          <label class="filter-select voice-select-wrap"><span class="visually-hidden">Choose a voice</span>
+            <select id="voice-select" aria-label="Choose a voice"><option value="">Loading voices...</option></select>
+          </label>
+        </div>
+        <p class="voice-quality-note"><span aria-hidden="true">✦</span> Voices marked <strong>Enhanced</strong> are identified by your browser’s voice name. We prioritize your device language, then recognized Natural or Neural voices. For lifelike speech, install a Natural voice in your browser or device settings; available voices vary by device.</p>
+        <div class="voices-status" id="voices-status" role="status" aria-live="polite">Looking for voices available in your browser…</div>
+        <div class="voice-grid" id="voice-grid" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="how-section section-pad" id="how-it-works" aria-labelledby="how-title">
+      <div class="content-width">
+        <div class="section-heading">
+          <span class="eyebrow">SIMPLE AS THAT</span>
+          <h2 id="how-title">Your text, <span class="gradient-text">three steps.</span></h2>
+        </div>
+        <div class="steps-grid">
+          <article class="step-card"><span class="step-number">01</span><div class="step-icon icon-purple" aria-hidden="true">✎</div><h3>Bring your words</h3><p>Type, paste, or try our sample. Notes, stories, articles — anything goes.</p></article>
+          <article class="step-card"><span class="step-number">02</span><div class="step-icon icon-pink" aria-hidden="true">♫</div><h3>Pick a voice</h3><p>Explore the voices installed on your device and tune the sound just right.</p></article>
+          <article class="step-card"><span class="step-number">03</span><div class="step-icon icon-orange" aria-hidden="true">▶</div><h3>Listen & enjoy</h3><p>Press play and follow along. Your words never leave this browser.</p></article>
+        </div>
+        <p class="free-note"><span aria-hidden="true">♡</span> Always free. No account, no uploads, no surprises.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="content-width footer-inner">
+      <a class="brand footer-brand" href="#" aria-label="SpeakEasy home"><span class="brand-mark" aria-hidden="true">S</span><span>Speak<span class="brand-accent">Easy</span></span></a>
+      <div class="footer-author">
+        <p>Made with care by <span class="author-name">Tosif Mansuri</span></p>
+        <nav class="author-links" aria-label="Author social profiles">
+          <a class="author-link linkedin-link" href="https://www.linkedin.com/in/tosifff" target="_blank" rel="noopener noreferrer" aria-label="Tosif Mansuri on LinkedIn">in <span>LinkedIn</span></a>
+          <a class="author-link github-link" href="https://github.com/TOSIFFF19" target="_blank" rel="noopener noreferrer" aria-label="Tosif Mansuri on GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 6v-3.9a3.4 3.4 0 0 0-.9-2.7c3-.3 6.2-1.5 6.2-6.8a5.3 5.3 0 0 0-1.4-3.7 4.9 4.9 0 0 0-.1-3.7S17.6 1 15 3a13.5 13.5 0 0 0-7 0C5.4 1 4.2 1.2 4.2 1.2a4.9 4.9 0 0 0-.1 3.7 5.3 5.3 0 0 0-1.4 3.7c0 5.3 3.2 6.5 6.2 6.8A3.4 3.4 0 0 0 8 18.1V22"></path></svg><span>GitHub</span></a>
+        </nav>
+      </div>
+      <span class="footer-powered">Powered by your browser <span aria-hidden="true">✦</span></span>
+    </div>
+  </footer>
+  <div class="parrot-companion" id="parrot-companion" aria-hidden="true">
+    <svg class="parrot-art" viewBox="0 0 120 100" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="60" cy="88" rx="32" ry="6" fill="#35285e" opacity=".15"/>
+      <path class="parrot-tail" d="M39 57 13 75l30-4 5 13 9-25" fill="#f49b46" stroke="#257655" stroke-width="3" stroke-linejoin="round"/>
+      <path d="m23 70 18-3m-13 7 18-5m0 8 8-12" fill="none" stroke="#ffe09a" stroke-width="2" stroke-linecap="round"/>
+      <path d="M47 79v10l-9 3m24-13v10l8 3" fill="none" stroke="#e78b36" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M37 48c0-20 14-34 34-34 17 0 29 12 29 28 0 15-12 29-29 31-20 2-34-8-34-25Z" fill="#42b982" stroke="#23684e" stroke-width="3"/>
+      <path class="parrot-wing" d="M43 48c6-12 19-18 33-13 8 3 13 9 15 17-7-5-14-5-19 0-7 7-15 9-25 6Z" fill="#69d89a" stroke="#287b58" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M50 48q10-9 23-8M54 53q11-8 25-7M60 57q9-6 18-6" fill="none" stroke="#b2f0c2" stroke-width="2" stroke-linecap="round" opacity=".82"/>
+      <path d="M62 20c4-9 12-14 20-13l-5 13" fill="#ef9b42" stroke="#23684e" stroke-width="2.5" stroke-linejoin="round"/>
+      <path d="M67 17q-2-8 3-13m4 12q2-9 9-12" fill="none" stroke="#ffd477" stroke-width="2.4" stroke-linecap="round"/>
+      <ellipse cx="70" cy="29" rx="9" ry="10" fill="#fff" stroke="#23684e" stroke-width="1.6"/>
+      <ellipse cx="91" cy="29" rx="9" ry="10" fill="#fff" stroke="#23684e" stroke-width="1.6"/>
+      <circle class="parrot-pupil" data-eye-x="70" cx="70" cy="30" r="4.3" fill="#25243a"/>
+      <circle class="parrot-pupil" data-eye-x="91" cx="91" cy="30" r="4.3" fill="#25243a"/>
+      <circle class="parrot-eye-glint" data-glint-x="71.5" cx="71.5" cy="28.5" r="1.3" fill="#fff"/>
+      <circle class="parrot-eye-glint" data-glint-x="92.5" cx="92.5" cy="28.5" r="1.3" fill="#fff"/>
+      <path class="parrot-eyelid" d="M60 29q10-17 20 0l-2 2q-8-10-16 0Zm21 0q10-17 20 0l-2 2q-8-10-16 0Z" fill="#42b982"/>
+      <path d="M77 37q5-4 11 0l-6 11q-4-2-5-11Z" fill="#ffbd48" stroke="#885c2f" stroke-width="2.2" stroke-linejoin="round"/>
+      <path class="parrot-beak" d="M78 46q4 2 4 7-4-1-5-6Z" fill="#ed7d36" stroke="#885c2f" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M75 54q7 4 14 0" fill="none" stroke="#23684e" stroke-width="1.5" stroke-linecap="round" opacity=".65"/>
+      <path d="M75 91h-13m31 0h-13" stroke="#e78b36" stroke-width="3" stroke-linecap="round"/>
+      <circle cx="73" cy="39" r="2.8" fill="#e87e79" opacity=".8"/>
+    </svg>
+    <span class="parrot-caption">I’m listening!</span>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
