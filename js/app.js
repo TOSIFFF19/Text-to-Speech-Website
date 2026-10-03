@@ -17,7 +17,7 @@
     "I'm reading a book about anti-gravity. It's impossible to put down."
   ];
   const PRESETS = {
-    greeting: "Hello there! Welcome to SpeakEasy. Take a breath, get comfortable, and let’s bring your words to life.",
+    greeting: "Hello there! Welcome to Say Text. Take a breath, get comfortable, and let’s bring your words to life.",
     story: "At the edge of a quiet little town, a paper boat slipped into the moonlit river. It carried a tiny note that read, “The best adventures begin when you set sail.”",
     news: "Here is your feel-good update for today: a little kindness can travel a long way. A friendly hello, a thoughtful message, or a helping hand might be the best news someone hears all day.",
     sample: SAMPLE_TEXT,
